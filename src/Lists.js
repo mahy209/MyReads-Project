@@ -58,7 +58,7 @@ export default class Lists extends Component {
                   </li>
                 );
               } else {
-                return;
+                return true;
               }
             })}
         </ol>

@@ -68,7 +68,7 @@ export default class SearchForBook extends Component {
             </div>
           </div>
           <div className="search-books-results">
-            <ol className="books-grid">Sorry ! no results are found.....</ol>
+            <ol className="books-grid">Sorry! no results are found yet!</ol>
           </div>
         </div>
       );
