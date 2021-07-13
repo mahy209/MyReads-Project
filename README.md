@@ -4,12 +4,24 @@ This is the starter template for the final assessment project for Udacity's Reac
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
-## TL;DR
+## How to Load the App
 
 To get started developing right away:
+* The project uses Node.js and the Create-React-App starter. If you do not have Node >= 6.x installed, you can download it here: Node.js
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+* Once Node is installed, navigate to the directory where you want to store the app
+* Once Node is installed, navigate to the directory where you want to store the app `npm install`
+* Once all of the dependencies have been installed you can launch the app with `npm start`
+* A new browser window should automatically open displaying the app. If it doesn't, navigate to http://localhost:3000/ in your browser
+![Screenshot 2021-07-13 114257](https://user-images.githubusercontent.com/60543525/125431021-3173a0c5-7cbc-45d9-bcca-048a2ceea3c8.png)
+## How to Use the App
+* Books are sorted into three categories: Currently Reading, Want to Read and Read
+* To change a book's category or remove a book from the list, click on the green button on the book cover
+![Screenshot 2021-07-13 114421](https://user-images.githubusercontent.com/60543525/125431029-7b75d44e-f93d-4b1f-b5aa-2e1540a597bf.png)
+* To add new books, click on the green + button at the bottom of the page. Enter an author's name or subject. Up to 20 items will be returned.
+
+Note: The backend API is limited to a fixed set of search terms -- see below for valid search options
+![Screenshot 2021-07-13 114506](https://user-images.githubusercontent.com/60543525/125431039-bb257f71-6648-429b-8556-92b464411137.png)
 
 ## What You're Getting
 ```bash
@@ -33,53 +45,9 @@ To get started developing right away:
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
-
-## Backend Server
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
-```
-
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
-
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf)
-```
-
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
-
-### `search`
-
-Method Signature:
-
-```js
-search(query)
-```
-
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
-
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'History', 'History', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery', 'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Program Javascript', 'Programming', 'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy', 'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'
 
 ## Create React App
 
