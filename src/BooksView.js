@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-//import { Link } from "react-router-dom";
 import Lists from "./Lists";
 import PropTypes from "prop-types";
 
 export default class BooksView extends Component {
   static propTypes = {
     books: PropTypes.array.isRequired,
-    onclickHandler: PropTypes.func.isRequired
+    onclickHandler: PropTypes.func.isRequired,
   };
   render() {
     return (

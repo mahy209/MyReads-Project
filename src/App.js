@@ -13,7 +13,7 @@ class BooksApp extends React.Component {
      * users can use the browser's back and forward buttons to navigate between
      * pages, as well as provide a good URL they can bookmark and share.
      */
-    books: []
+    books: [],
   };
 
   getAllBooks = () => {
@@ -30,7 +30,7 @@ class BooksApp extends React.Component {
       BooksAPI.update(Book, BooksView).then(() => {
         Book.shelf = BooksView;
         this.setState((state) => ({
-          books: state.books.filter((b) => b.id !== Book.id).concat(Book)
+          books: state.books.filter((b) => b.id !== Book.id).concat(Book),
         }));
       });
     }
@@ -39,10 +39,10 @@ class BooksApp extends React.Component {
   updateShelfHandler = (e, book) => {
     BooksAPI.update(book, e.target.value).then(() => {
       this.setState((state) => ({
-        books: state.books.filter((b) => b.id !== book.id).concat(book)
+        books: state.books.filter((b) => b.id !== book.id).concat(book),
       }));
 
-      this.getAllBooks();
+      this.getAllBooks()
     });
   };
 
