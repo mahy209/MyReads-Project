@@ -16,15 +16,34 @@ export default class SearchForBook extends Component {
     }
 
     updateQuery = (query) => {
-        this.setState(() => ({
-            query: query
-        }))
+      this.setState(() => ({
+          query: query
+      }))
 
-        BooksAPI.search(query).then((books) => {
-          books = books ? books : [];
-          this.setState({books})
-        })        
-    }
+      BooksAPI.search(query).then((apiBooks) => {
+        apiBooks = apiBooks ? apiBooks : [];
+
+        if(apiBooks.length>0){
+          // home books
+          this.props.books.map((storedBook) => {
+
+            // books comming from search
+            apiBooks.find(apiBook => {
+              if(apiBook.title === storedBook.title){
+                apiBook.shelf = storedBook.shelf;
+              }
+              return null;
+            })
+            return null;
+
+          })
+        }
+
+
+        this.setState({books: apiBooks})
+      })        
+  }
+
 render(){
     if(this.props.books.length>0 && this.state.query!==''){
         return(
