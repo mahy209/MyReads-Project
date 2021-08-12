@@ -1,6 +1,6 @@
 # MyReads Project
 ## description
-This game was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app. This is a ReactJS project made in compliance as final assessment project for Udacity's React Fundamentals course. The goal of this project is to allow students to demonstrate one's grasp on the use of React library based on the provided course by Udacity.
+This is a ReactJS project made in compliance as final assessment project for Udacity's React Fundamentals course. The goal of this project is to allow students to demonstrate one's grasp on the use of React library based on the provided course by Udacity.
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
